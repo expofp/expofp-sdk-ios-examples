@@ -19,7 +19,7 @@ struct ContentView: View {
         List {
             ForEach(exhibitors) { exhibitor in
                 NavigationLink(exhibitor.name) {
-                    Text(exhibitor.name)
+                    ExhibitorView(exhibitor: exhibitor)
                 }
             }
         }

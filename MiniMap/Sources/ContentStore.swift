@@ -12,5 +12,5 @@ import Foundation
 
 @MainActor
 final class ContentStore: ObservableObject {
-    let presenter = ExpoFpPlan.createPlanPresenter(with: .expoKey("demo"))
+    let presenter = ExpoFpPlan.createPlanPresenter(with: .expoKey("demo"), additionalParams: [.noOverlay(true)])
 }
