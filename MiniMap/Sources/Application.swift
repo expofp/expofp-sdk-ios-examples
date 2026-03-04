@@ -11,9 +11,14 @@ import SwiftUI
 @main
 struct Application: App {
 
+    @StateObject private var store = ContentStore()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationStack {
+                ContentView()
+            }
+            .environmentObject(store)
         }
     }
 }

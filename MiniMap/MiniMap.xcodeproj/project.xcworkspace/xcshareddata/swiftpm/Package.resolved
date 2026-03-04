@@ -1,0 +1,15 @@
+{
+  "originHash" : "877bb4c32344000cb19028fcdb7acaf96d42c026fa094604fbaa6bd36e0acf34",
+  "pins" : [
+    {
+      "identity" : "expofp-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/expofp/expofp-sdk-ios",
+      "state" : {
+        "revision" : "97accb3302454dfd68ef3717562c46263155c82b",
+        "version" : "5.4.6"
+      }
+    }
+  ],
+  "version" : 3
+}

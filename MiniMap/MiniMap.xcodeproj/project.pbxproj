@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B21C63812F5846C900A24938 /* ExpoFP in Frameworks */ = {isa = PBXBuildFile; productRef = B21C63802F5846C900A24938 /* ExpoFP */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		B21C620F2F583B8100A24938 /* MiniMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MiniMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B21C63812F5846C900A24938 /* ExpoFP in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +90,7 @@
 			);
 			name = MiniMap;
 			packageProductDependencies = (
+				B21C63802F5846C900A24938 /* ExpoFP */,
 			);
 			productName = MiniMap;
 			productReference = B21C620F2F583B8100A24938 /* MiniMap.app */;
@@ -115,6 +121,9 @@
 			);
 			mainGroup = B21C62062F583B8100A24938;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B21C637F2F5846C900A24938 /* XCRemoteSwiftPackageReference "expofp-sdk-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B21C62102F583B8100A24938 /* Products */;
 			projectDirPath = "";
@@ -361,6 +370,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B21C637F2F5846C900A24938 /* XCRemoteSwiftPackageReference "expofp-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/expofp/expofp-sdk-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B21C63802F5846C900A24938 /* ExpoFP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B21C637F2F5846C900A24938 /* XCRemoteSwiftPackageReference "expofp-sdk-ios" */;
+			productName = ExpoFP;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B21C62072F583B8100A24938 /* Project object */;
 }
