@@ -24,16 +24,20 @@ struct ContentView: View {
             }
         }
         .scrollIndicators(.hidden)
-        .navigationTitle(store.presenter.planLink.description.capitalized)
+        .navigationTitle(store.miniMap.planLink.description.capitalized)
         .overlay {
             if !status.isReady {
                 LoadingView(status: $status)
             }
         }
-        .onReceive(store.presenter.planStatusPublisher) { status in
+        .onReceive(store.miniMap.planStatusPublisher) { status in
             self.status = status
 
             if status == .ready && exhibitors.isEmpty {
+                let visibility = ExpoFpElementsVisibility(controls: false, levels: false, header: false, overlay: false)
+                store.miniMap.setElementsVisibility(visibility)
+                store.map.setElementsVisibility(visibility)
+
                 prepareExhibitors()
             }
         }
@@ -42,7 +46,7 @@ struct ContentView: View {
     private func prepareExhibitors() {
         Task {
             do {
-                exhibitors = try await store.presenter.exhibitorsList().get()
+                exhibitors = try await store.miniMap.exhibitorsList().get()
             } catch {
                 print(#function, error)
             }

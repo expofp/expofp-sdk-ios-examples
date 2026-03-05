@@ -12,5 +12,6 @@ import Foundation
 
 @MainActor
 final class ContentStore: ObservableObject {
-    let presenter = ExpoFpPlan.createPlanPresenter(with: .expoKey("demo"), additionalParams: [.noOverlay(true)])
+    let miniMap = ExpoFpPlan.createPlanPresenter(with: .expoKey("demo"))
+    let map = ExpoFpPlan.createPlanPresenter(with: .expoKey("demo"))
 }
